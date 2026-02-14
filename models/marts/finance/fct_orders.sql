@@ -15,12 +15,12 @@ with orders as  (
 ),
 
 payments as (
-    select * from {{ ref ('stg_stripe__payment') }}
+    select * from {{ ref ('stg_stripe__payments') }}
 ),
 
 order_payments as (
     select
-        orderid as order_id,
+        order_id as order_id,
         sum (case when status = 'success' then amount end) as amount
 
     from payments

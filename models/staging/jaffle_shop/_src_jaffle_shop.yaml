@@ -1,9 +1,11 @@
 sources:
   - name: jaffle_shop
+    description: working with jaffle_shop schema tables
     database: raw  
     schema: jaffle_shop  
     tables:
       - name: orders
+        description: tacking the orders transactions
         freshness:
           warn_after:
             count: 10
@@ -13,3 +15,4 @@ sources:
             period: day
         loaded_at_field: _ETL_LOADED_AT
       - name: customers
+        description: tracking customers dats
