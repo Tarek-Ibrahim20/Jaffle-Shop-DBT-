@@ -6,13 +6,4 @@ sources:
     tables:
       - name: orders
         description: tacking the orders transactions
-        freshness:
-          warn_after:
-            count: 10
-            period: day
-          error_after:
-            count: 20
-            period: day
-        loaded_at_field: _ETL_LOADED_AT
-      - name: customers
-        description: tracking customers dats
+      - name: customers  
